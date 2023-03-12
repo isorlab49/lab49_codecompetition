@@ -1,0 +1,1 @@
+class F{public static void main(String[]a){for(var i=0;i++<100;){var f=i%3>0;var b=i%5>0;System.out.println(f&&b?i:(!f?"Fizz":"")+(!b?"Buzz":""));}}}
