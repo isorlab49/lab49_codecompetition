@@ -1,20 +1,13 @@
 class M{public static void main(String[]a){
-        int[]l={1};
-        var m=1;
-        while(m<21){
+        int[][]l=new int[22][22];
+        int m=-1;
+        while(m++<20){
             int i=0;
+            l[m][0]=1;
             while(i<m){
-                System.out.print(l[i++]+(i==m?"\n":" "));
+                System.out.print(l[m][i]+(i==m-1?"\n":" "));
+                l[m+1][i+1]=l[m][i+1]+l[m][i++];
             }
-            int[]k=new int[m+1];
-            i=0;
-            k[i]=l[i++];
-            for(;i<m;i++){
-                k[i]=l[i]+l[i-1];
-            }
-            k[m]=1;
-            l=k;
-            m++;
         }
     }
 }
